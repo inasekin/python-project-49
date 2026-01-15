@@ -26,12 +26,43 @@ make build
 make package-install
 ```
 
-## Использование
+## Игры
 
-После установки запустите игру командой:
+### brain-even - Проверка на чётность
+
+Пользователю показывается случайное число. Нужно ответить `yes`, если число чётное, или `no` — если нечётное.
 
 ```bash
-brain-games
+brain-even
+```
+
+## Примеры игр
+
+### Игра "Проверка на чётность"
+
+Запустите игру:
+
+```bash
+brain-even
+```
+
+Пример успешной игры:
+
+```
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+Answer "yes" if the number is even, otherwise answer "no".
+Question: 15
+Your answer: no
+Correct!
+Question: 6
+Your answer: yes
+Correct!
+Question: 7
+Your answer: no
+Correct!
+Congratulations, Sam!
 ```
 
 ## Разработка
