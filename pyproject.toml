@@ -8,9 +8,12 @@ packages = ["brain_games"]
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "Brain Games - A set of mini-games to train your mind"
 readme = "README.md"
 requires-python = ">=3.11"
+authors = [
+    { name = "Ivan Nasekin" }
+]
 dependencies = [
     "prompt>=0.4.1",
 ]

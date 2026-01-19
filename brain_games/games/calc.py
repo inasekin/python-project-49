@@ -1,8 +1,13 @@
+import operator
 import random
 
 DESCRIPTION = "What is the result of the expression?"
 
-OPERATIONS = ["+", "-", "*"]
+OPERATIONS = {
+    "+": operator.add,
+    "-": operator.sub,
+    "*": operator.mul,
+}
 MIN_NUMBER = 1
 MAX_NUMBER = 100
 
@@ -18,12 +23,7 @@ def calculate(num1, num2, operation):
     Returns:
         int: результат вычисления
     """
-    if operation == "+":
-        return num1 + num2
-    elif operation == "-":
-        return num1 - num2
-    elif operation == "*":
-        return num1 * num2
+    return OPERATIONS[operation](num1, num2)
 
 
 def generate_round():
@@ -34,7 +34,7 @@ def generate_round():
     """
     num1 = random.randint(MIN_NUMBER, MAX_NUMBER)
     num2 = random.randint(MIN_NUMBER, MAX_NUMBER)
-    operation = random.choice(OPERATIONS)
+    operation = random.choice(list(OPERATIONS.keys()))
 
     question = f"{num1} {operation} {num2}"
     correct_answer = str(calculate(num1, num2, operation))
